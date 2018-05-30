@@ -69,8 +69,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Rzzil\Documents\Visual Studio 2015\Projects\Escape\SDL2_2015\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Rzzil\Documents\Visual Studio 2015\Projects\Escape\SDL2_2015\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Administrator\Desktop\class\gameEngine\Escape\SDL2_2015\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Administrator\Desktop\class\gameEngine\Escape\SDL2_2015\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
