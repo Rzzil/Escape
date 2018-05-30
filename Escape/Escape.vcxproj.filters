@@ -30,6 +30,33 @@
     <ClCompile Include="Entity.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateMachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalGameState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuScreenState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayScreenState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardHandler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseHandler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -42,6 +69,33 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateMachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalGameState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuScreenState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePlayScreenState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
