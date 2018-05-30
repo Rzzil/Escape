@@ -66,11 +66,13 @@ int main(int argc, char **argv)
 
 
 	SDL_Texture *background = IMG_LoadTexture(renderer, "assets/background.jpg");
-	SDL_Texture *run = IMG_LoadTexture(renderer, "assets/player1.png");
+	//SDL_Texture *run = IMG_LoadTexture(renderer, "assets/player1.png");
+	SDL_Texture *run = IMG_LoadTexture(renderer, "assets/walkfix1.png");
 	SDL_Rect src = { 0,0,640,480 };
 	SDL_Rect dest = { 0,0,640,480 };
 
-	Animation anime1(run, renderer, 6, 63.33, 64, 0.1);
+	//Animation anime1(run, renderer, 6, 63.33, 64, 0.1);
+	Animation anime1(run, renderer, 3, 47.67, 49, 0.1);
 
 	Player *p1 = new Player();
 	Vector playerPosition(0, 240);

@@ -20,10 +20,10 @@ void Player::setAnimation(Animation* animation)
 void Player::update(float dt) {
 	//face direction based on velocity.x value
 	if (velocity.x >= 0) {
-		faceRight = false;
+		faceRight = true;
 	}
 	if (velocity.x < 0) {
-		faceRight = true;
+		faceRight = false;
 	}
 
 	//use basic entity movement to move around

@@ -1,17 +1,5 @@
-﻿  Vector.cpp
-  Player.cpp
+﻿  Player.cpp
 c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\player.cpp(38): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
 c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\player.cpp(40): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-  main.cpp
-c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\main.cpp(24): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\main.cpp(73): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\main.cpp(73): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\main.cpp(107): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\main.cpp(117): warning C4305: “+=”: 从“double”到“float”截断
-  Entity.cpp
-  Animation.cpp
-c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\animation.cpp(52): warning C4838: 从“float”转换到“int”需要收缩转换
-c:\users\rzzil\documents\visual studio 2015\projects\escape\escape\animation.cpp(52): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-  正在生成代码...
-  Escape.vcxproj -> c:\users\rzzil\documents\visual studio 2015\Projects\Escape\Debug\Escape.exe
-  Escape.vcxproj -> c:\users\rzzil\documents\visual studio 2015\Projects\Escape\Debug\Escape.pdb (Partial PDB)
+  Escape.vcxproj -> C:\Users\Rzzil\Documents\Visual Studio 2015\Projects\Escape\Debug\Escape.exe
+  Escape.vcxproj -> C:\Users\Rzzil\Documents\Visual Studio 2015\Projects\Escape\Debug\Escape.pdb (Partial PDB)
