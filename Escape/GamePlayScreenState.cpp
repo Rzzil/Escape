@@ -198,15 +198,22 @@ void GamePlayScreenState::update() {
 			return;
 		}
 		//check if user has 'pressed' a button(not held)
-		if (e.type == SDL_KEYDOWN) {
+		if (e.type == SDL_KEYDOWN)
+		{
 			//see if ESC key was pressed
-			if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
+			if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE)
+			{
 				//exit loop
 				//loop = false;
 				GlobalGameState::gameStateMachine.popState(); //which will kill this screen
 				return;
 			}
-
+			if (e.key.keysym.scancode == SDL_SCANCODE_1)
+			{
+				GlobalGameState::gameStateMachine.popState();
+				GlobalGameState::gameStateMachine.pushState(new SecondPlayScreenState());
+				return;
+			}
 		}
 		keyboardHandler.update(&e);
 		//mouseHandler.update(&e);

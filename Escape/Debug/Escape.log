@@ -1,47 +1,6 @@
-﻿  GamePlayScreenState.cpp
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(10): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(10): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(20): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(20): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(23): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(29): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(29): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(33): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(38): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(38): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(41): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(42): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(47): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(47): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(50): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(56): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(56): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(59): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(65): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(65): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(68): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(69): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(74): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(74): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(77): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(78): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(83): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(83): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(86): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(87): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(92): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(92): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(95): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(96): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(101): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(101): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(104): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(105): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(111): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(111): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(114): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(115): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(182): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-c:\users\administrator\documents\github\escape\escape\gameplayscreenstate.cpp(229): warning C4305: “参数”: 从“double”到“float”截断
-  Escape.vcxproj -> C:\Users\Administrator\Documents\GitHub\Escape\Debug\Escape.exe
-  Escape.vcxproj -> C:\Users\Administrator\Documents\GitHub\Escape\Debug\Escape.pdb (Partial PDB)
+﻿  MenuScreenState.cpp
+c:\users\rzzil\documents\github\escape\escape\menuscreenstate.cpp(8): warning C4305: “参数”: 从“double”到“float”截断
+c:\users\rzzil\documents\github\escape\escape\menuscreenstate.cpp(8): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+c:\users\rzzil\documents\github\escape\escape\menuscreenstate.cpp(31): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Escape.vcxproj -> C:\Users\Rzzil\Documents\GitHub\Escape\Debug\Escape.exe
+  Escape.vcxproj -> C:\Users\Rzzil\Documents\GitHub\Escape\Debug\Escape.pdb (Partial PDB)

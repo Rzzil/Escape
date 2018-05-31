@@ -1,4 +1,5 @@
 #pragma once
+#include "SecondPlayScreenState.h"
 #include <list>
 #include <SDL_image.h>
 #include <SDL_ttf.h>

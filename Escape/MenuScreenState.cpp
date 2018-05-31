@@ -115,7 +115,7 @@ void MenuScreenState::render() {
 	//LOAD UP OUR FONT
 	TTF_Font* font1 = TTF_OpenFont("assets/yahei.ttf", 25); //params: font file, font size
 															//create a sruface using this font to display some sort of message
-	SDL_Surface* textSurface1 = TTF_RenderText_Blended(font1, "Press E to show action", textColor);
+	SDL_Surface* textSurface1 = TTF_RenderText_Blended(font1, "Press SpaceBar to Start", textColor);
 	//convert surface to texture
 	SDL_Texture* textTexture1 = SDL_CreateTextureFromSurface(GlobalGameState::renderer, textSurface1);
 	//delete surface properly

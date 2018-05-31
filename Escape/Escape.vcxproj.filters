@@ -57,6 +57,9 @@
     <ClCompile Include="SoundManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SecondPlayScreenState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -96,6 +99,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SoundManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondPlayScreenState.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

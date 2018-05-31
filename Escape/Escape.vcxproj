@@ -69,8 +69,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Administrator\Documents\GitHub\Escape\SDL2_2015\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Administrator\Documents\GitHub\Escape\SDL2_2015\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Rzzil\Documents\GitHub\Escape\SDL2_2015\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Rzzil\Documents\GitHub\Escape\SDL2_2015\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -129,6 +129,7 @@
     <ClCompile Include="MenuScreenState.cpp" />
     <ClCompile Include="MouseHandler.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SecondPlayScreenState.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="MenuScreenState.h" />
     <ClInclude Include="MouseHandler.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="SecondPlayScreenState.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
