@@ -4,6 +4,7 @@
 class KeyboardHandler : public InputHandler
 {
 public:
+	float speed;
 	KeyboardHandler();
 	~KeyboardHandler();
 

@@ -21,6 +21,8 @@ MenuScreenState::MenuScreenState()
 MenuScreenState::~MenuScreenState()
 {
 	SDL_DestroyTexture(heroTexture);
+	delete player;
+	delete heroAnimation;
 }
 
 void MenuScreenState::update() {
