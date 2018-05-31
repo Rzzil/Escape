@@ -24,7 +24,7 @@ public:
 	//for text color
 	SDL_Color textColor = { 123, 0, 34, 0 };
 
-	list<Entity*> entities;
+	list<Player*> entities;
 
 	//TIME STUFF
 	Uint32 lastUpdate; //last sdl_ticks

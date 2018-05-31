@@ -15,6 +15,7 @@ public:
 
 	//overriding
 	virtual void update(float dt);
-	virtual void draw();
+	virtual void draw(float scale);
+
 };
 

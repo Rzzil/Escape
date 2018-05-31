@@ -19,7 +19,7 @@ void Player::setAnimation(Animation* animation)
 //overriding
 void Player::update(float dt) {
 	//face direction based on velocity.x value
-	if (velocity.x >= 0) {
+	if (velocity.x > 0) {
 		faceRight = true;
 	}
 	if (velocity.x < 0) {
@@ -32,11 +32,13 @@ void Player::update(float dt) {
 	//update animations too
 	animation->update(dt);
 }
-void Player::draw() {
+
+void Player::draw(float scale)
+{
 	if (animation != NULL) {
 		if (faceRight)
-			animation->draw(pos.x, pos.y);
+			animation->draw(pos.x, pos.y, scale, false);
 		else
-			animation->draw(pos.x, pos.y, true);
+			animation->draw(pos.x, pos.y, scale, true);
 	}
 }

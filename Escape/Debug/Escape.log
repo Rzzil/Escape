@@ -1,25 +1,11 @@
-﻿  main.cpp
-  SoundManager.cpp
-  Player.cpp
-c:\users\administrator\desktop\class\gameengine\escape\escape\player.cpp(38): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-c:\users\administrator\desktop\class\gameengine\escape\escape\player.cpp(40): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-  MouseHandler.cpp
-c:\users\administrator\desktop\class\gameengine\escape\escape\mousehandler.cpp(35): warning C4244: “=”: 从“Sint32”转换到“float”，可能丢失数据
-c:\users\administrator\desktop\class\gameengine\escape\escape\mousehandler.cpp(36): warning C4244: “=”: 从“Sint32”转换到“float”，可能丢失数据
-  MenuScreenState.cpp
-c:\users\administrator\desktop\class\gameengine\escape\escape\menuscreenstate.cpp(8): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\desktop\class\gameengine\escape\escape\menuscreenstate.cpp(8): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\desktop\class\gameengine\escape\escape\menuscreenstate.cpp(29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-  KeyboardHandler.cpp
-  InputHandler.cpp
-  GlobalGameState.cpp
-  GamePlayScreenState.cpp
-c:\users\administrator\desktop\class\gameengine\escape\escape\gameplayscreenstate.cpp(14): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\desktop\class\gameengine\escape\escape\gameplayscreenstate.cpp(43): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-  Entity.cpp
-  Animation.cpp
-c:\users\administrator\desktop\class\gameengine\escape\escape\animation.cpp(52): warning C4838: 从“float”转换到“int”需要收缩转换
-c:\users\administrator\desktop\class\gameengine\escape\escape\animation.cpp(52): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+﻿  GamePlayScreenState.cpp
+c:\users\rzzil\documents\github\escape\escape\gameplayscreenstate.cpp(9): warning C4305: “参数”: 从“double”到“float”截断
+c:\users\rzzil\documents\github\escape\escape\gameplayscreenstate.cpp(9): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+c:\users\rzzil\documents\github\escape\escape\gameplayscreenstate.cpp(35): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+c:\users\rzzil\documents\github\escape\escape\gameplayscreenstate.cpp(82): warning C4305: “参数”: 从“double”到“float”截断
   正在生成代码...
-  Escape.vcxproj -> C:\Users\Administrator\Desktop\class\gameEngine\Escape\Debug\Escape.exe
-  Escape.vcxproj -> C:\Users\Administrator\Desktop\class\gameEngine\Escape\Debug\Escape.pdb (Partial PDB)
+  正在跳过...(未检测到相关更改)
+  main.cpp
+  MenuScreenState.cpp
+  Escape.vcxproj -> C:\Users\Rzzil\Documents\GitHub\Escape\Debug\Escape.exe
+  Escape.vcxproj -> C:\Users\Rzzil\Documents\GitHub\Escape\Debug\Escape.pdb (Partial PDB)

@@ -69,13 +69,13 @@ void MenuScreenState::render() {
 	SDL_RenderClear(GlobalGameState::renderer);*/
 
 	SDL_Texture *background = IMG_LoadTexture(GlobalGameState::renderer, "assets/background.jpg");
-	SDL_Rect src = { 0,0,900,490 };
+	SDL_Rect src = { 0,0,640,480 };
 	SDL_Rect dest = { 0,0,640,480 };
 
 	SDL_RenderCopy(GlobalGameState::renderer, background, &src, &dest);
 
 	for (auto e : entities) {
-		e->draw();
+		e->draw(1);
 	}
 	//hero->draw();
 

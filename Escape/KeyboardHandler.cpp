@@ -26,16 +26,16 @@ void KeyboardHandler::update(SDL_Event* event) {
 	const Uint8 *keystates = SDL_GetKeyboardState(NULL); //you can pass it a smaller array, or null to return all keys
 														 //if hold up, move hero up
 	if (keystates[SDL_SCANCODE_UP])
-		player->velocity.y = -80;
+		player->velocity.y = -100;
 	//down
 	if (keystates[SDL_SCANCODE_DOWN])
-		player->velocity.y = 80;
+		player->velocity.y = 100;
 	//left
 	if (keystates[SDL_SCANCODE_LEFT])
-		player->velocity.x = -80;
+		player->velocity.x = -100;
 	//right
 	if (keystates[SDL_SCANCODE_RIGHT])
-		player->velocity.x = 80;
+		player->velocity.x = 100;
 	//check if none are held down
 	if (!keystates[SDL_SCANCODE_UP] && !keystates[SDL_SCANCODE_DOWN])
 	{

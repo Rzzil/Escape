@@ -3,38 +3,30 @@
 
 GamePlayScreenState::GamePlayScreenState()
 {
-	SDL_Surface* runSurface = IMG_Load("assets/run.png");
-	//tell surface which colour should be invisible
-	SDL_SetColorKey(runSurface, 1, SDL_MapRGB(runSurface->format, 128, 128, 255));
-	//convert it to texture
-	heroTexture = SDL_CreateTextureFromSurface(GlobalGameState::renderer, runSurface);
-	//cleanup surface memory
-	SDL_FreeSurface(runSurface);
-
-	heroAnimation = new Animation(heroTexture, GlobalGameState::renderer, 4, 32, 32, 0.8);
-
+	background = IMG_LoadTexture(GlobalGameState::renderer, "assets/Stage1.png");
+	playerTexture = IMG_LoadTexture(GlobalGameState::renderer, "assets/walkfix1.png");
 	player = new Player();
-	player->setAnimation(heroAnimation);
+	playerAnimation = new Animation(playerTexture, GlobalGameState::renderer, 3, 47.67, 49, 0.1);
+	player->setAnimation(playerAnimation);
 	player->setRenderer(GlobalGameState::renderer);
-	player->pos.x = 200;
-	player->pos.y = 200;
-
+	player->pos.x = 0;
+	player->pos.y = 240;
 
 	entities.push_back(player);
-
 	keyboardHandler.player = player;
-	mouseHandler.player = player;
 
 	lastUpdate = SDL_GetTicks();
 
+	
 }
 
 GamePlayScreenState::~GamePlayScreenState()
 {
 	//delete everything we need to
+	SDL_DestroyTexture(background);
+	SDL_DestroyTexture(playerTexture);
 	delete player;
-	delete heroAnimation;
-	SDL_DestroyTexture(heroTexture);
+	delete playerAnimation;
 }
 
 void GamePlayScreenState::update() {
@@ -74,21 +66,25 @@ void GamePlayScreenState::update() {
 	}
 
 	//hero->update(dt);
-	for (auto e : entities) {
+	for (auto e : entities)
+	{
 		e->update(dt);
 	}
 }
 void GamePlayScreenState::render() {
-	SDL_SetRenderDrawColor(GlobalGameState::renderer, 255, 90, 0, 255);
 
-	SDL_RenderClear(GlobalGameState::renderer);
-
-	for (auto e : entities) {
-		e->draw();
-	}
+	
 	//hero->draw();
 
+	SDL_RenderCopy(GlobalGameState::renderer, background, &backgroundSrc, &backgroundDest);
+	for (auto e : entities)
+	{
+		e->draw(0.6);
+	}
+
 	SDL_RenderPresent(GlobalGameState::renderer);
+
+	
 }
 bool GamePlayScreenState::onEnter() {
 	cout << "Enter Gameplay state" << endl;

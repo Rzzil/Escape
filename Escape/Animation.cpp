@@ -68,3 +68,19 @@ void Animation::draw(int x, int y, bool flip)
 
 	SDL_RenderCopyEx(renderer, spriteSheet, &clip, &dest, 0, 0, flipType);
 }
+
+void Animation::draw(int x, int y, float scale, bool flip)
+{
+	SDL_Rect clip;
+	clip.x = currentFrame*frameWidth;
+	clip.y = 0;
+	clip.w = frameWidth;
+	clip.h = frameHeight;
+	SDL_Rect dest = { x, y, frameWidth*scale, frameHeight*scale };
+
+	SDL_RendererFlip flipType = SDL_FLIP_NONE;
+	if (flip)
+		flipType = SDL_FLIP_HORIZONTAL;
+
+	SDL_RenderCopyEx(renderer, spriteSheet, &clip, &dest, 0, 0, flipType);
+}

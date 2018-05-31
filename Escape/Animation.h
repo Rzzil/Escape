@@ -19,5 +19,6 @@ public:
 	void draw(int x, int y);
 	void draw(int x, int y, float scale);
 	void draw(int x, int y, bool flip);
+	void draw(int x, int y, float scale, bool flip);
 };
 
