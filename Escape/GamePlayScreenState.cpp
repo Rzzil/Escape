@@ -4,6 +4,10 @@
 GamePlayScreenState::GamePlayScreenState()
 {
 	background = IMG_LoadTexture(GlobalGameState::renderer, "assets/Stage1.png");
+	w = IMG_LoadTexture(GlobalGameState::renderer, "assets/W.png");
+	s = IMG_LoadTexture(GlobalGameState::renderer, "assets/S.png");
+	a = IMG_LoadTexture(GlobalGameState::renderer, "assets/A.png");
+	d = IMG_LoadTexture(GlobalGameState::renderer, "assets/D.png");
 	//Player set
 	playerTexture = IMG_LoadTexture(GlobalGameState::renderer, "assets/walkfix1.png");
 	player = new Player();
@@ -126,6 +130,10 @@ GamePlayScreenState::~GamePlayScreenState()
 {
 	//delete everything we need to
 	SDL_DestroyTexture(background);
+	SDL_DestroyTexture(w);
+	SDL_DestroyTexture(s);
+	SDL_DestroyTexture(a);
+	SDL_DestroyTexture(d);
 	//player destory
 	SDL_DestroyTexture(playerTexture);
 	delete player;
@@ -183,9 +191,106 @@ void GamePlayScreenState::update() {
 	lastUpdate = SDL_GetTicks();
 
 	//judge if the player hit the monsters
-	if (true)
+	if (
+		(player->pos.x + 15 >= monster1->pos.x && player->pos.y + 15 >= monster1->pos.y) &&
+		(player->pos.x <= monster1->pos.x + 15 && player->pos.y <= monster1->pos.y + 15)
+		)
 	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
 
+	if (
+		(player->pos.x + 15 >= monster2->pos.x && player->pos.y + 15 >= monster2->pos.y) &&
+		(player->pos.x <= monster2->pos.x + 15 && player->pos.y <= monster2->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+
+	if (
+		(player->pos.x + 15 >= monster3->pos.x && player->pos.y + 15 >= monster3->pos.y) &&
+		(player->pos.x <= monster3->pos.x + 15 && player->pos.y <= monster3->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+	if (
+		(player->pos.x + 15 >= monster4->pos.x && player->pos.y + 15 >= monster4->pos.y) &&
+		(player->pos.x <= monster4->pos.x + 15 && player->pos.y <= monster4->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+	if (
+		(player->pos.x + 15 >= monster11->pos.x && player->pos.y + 15 >= monster11->pos.y) &&
+		(player->pos.x <= monster11->pos.x + 15 && player->pos.y <= monster11->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+	if (
+		(player->pos.x + 15 >= monster5->pos.x && player->pos.y + 15 >= monster5->pos.y) &&
+		(player->pos.x <= monster5->pos.x + 15 && player->pos.y <= monster5->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+	if (
+		(player->pos.x + 15 >= monster6->pos.x && player->pos.y + 15 >= monster6->pos.y) &&
+		(player->pos.x <= monster6->pos.x + 15 && player->pos.y <= monster6->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+	if (
+		(player->pos.x + 15 >= monster7->pos.x && player->pos.y + 15 >= monster7->pos.y) &&
+		(player->pos.x <= monster7->pos.x + 15 && player->pos.y <= monster7->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+	if (
+		(player->pos.x + 15 >= monster8->pos.x && player->pos.y + 15 >= monster8->pos.y) &&
+		(player->pos.x <= monster8->pos.x + 15 && player->pos.y <= monster8->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+	if (
+		(player->pos.x + 15 >= monster9->pos.x && player->pos.y + 15 >= monster9->pos.y) &&
+		(player->pos.x <= monster9->pos.x + 15 && player->pos.y <= monster9->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
+	}
+	if (
+		(player->pos.x + 15 >= monster10->pos.x && player->pos.y + 15 >= monster10->pos.y) &&
+		(player->pos.x <= monster10->pos.x + 15 && player->pos.y <= monster10->pos.y + 15)
+		)
+	{
+		player->velocity.x = 0;
+		player->velocity.y = 0;
+		keyboardHandler.speed = 0;
 	}
 	//The cooldown trigger of skills
 	if (keyboardHandler.cooldowntriggerA)
@@ -411,6 +516,10 @@ void GamePlayScreenState::render() {
 	//hero->draw();
 
 	SDL_RenderCopy(GlobalGameState::renderer, background, &backgroundSrc, &backgroundDest);
+	SDL_RenderCopy(GlobalGameState::renderer, w, &wsrc, &wdest);
+	SDL_RenderCopy(GlobalGameState::renderer, s, &ssrc, &sdest);
+	SDL_RenderCopy(GlobalGameState::renderer, a, &asrc, &adest);
+	SDL_RenderCopy(GlobalGameState::renderer, d, &dsrc, &ddest);
 	for (auto e : entities)
 	{
 		e->draw(0.6);
@@ -441,13 +550,19 @@ void GamePlayScreenState::render() {
 	//clean up textures
 	SDL_DestroyTexture(textTexture);
 
-	stringstream s1, s2;
+
+
+	stringstream s1,s2,s3,s4;
 	s1.precision(1);
 	s2.precision(1);
+	s3.precision(1);
+	s4.precision(1);
 	s1 << fixed << player->cooldownW;
 	s2 << fixed << player->cooldownS;
+	s3 << fixed << player->cooldownA;
+	s4 << fixed << player->cooldownD;
 
-	temp = "Skill W CD: " + s1.str() + " Skill S CD: " + s2.str();
+	temp = s1.str();
 	const char* location1 = temp.c_str();
 	//LOAD UP OUR FONT
 	TTF_Font* font2 = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
@@ -460,8 +575,8 @@ void GamePlayScreenState::render() {
 
 	//text destination
 	SDL_Rect textDestination1;
-	textDestination1.x = 30;
-	textDestination1.y = 10;
+	textDestination1.x = 305;
+	textDestination1.y = 5;
 	//get width and height from texture and set it for the destination
 	SDL_QueryTexture(textTexture2, NULL, NULL, &textDestination1.w, &textDestination1.h);
 
@@ -472,13 +587,8 @@ void GamePlayScreenState::render() {
 	SDL_DestroyTexture(textTexture2);
 
 
-	stringstream s3, s4;
-	s3.precision(1);
-	s4.precision(1);
-	s3 << fixed << player->cooldownA;
-	s4 << fixed << player->cooldownD;
-
-	temp = "Skill A CD: " + s3.str() + " Skill D CD: " + s4.str();
+	
+	temp = s2.str();
 	const char* location2 = temp.c_str();
 	//LOAD UP OUR FONT
 	TTF_Font* font3 = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
@@ -491,8 +601,8 @@ void GamePlayScreenState::render() {
 
 	//text destination
 	SDL_Rect textDestination2;
-	textDestination2.x = 30;
-	textDestination2.y = 40;
+	textDestination2.x = 305;
+	textDestination2.y = 35;
 	//get width and height from texture and set it for the destination
 	SDL_QueryTexture(textTexture3, NULL, NULL, &textDestination2.w, &textDestination2.h);
 
@@ -502,6 +612,58 @@ void GamePlayScreenState::render() {
 	//clean up textures
 	SDL_DestroyTexture(textTexture3);
 
+
+
+
+	temp = s3.str();
+	const char* location3 = temp.c_str();
+	//LOAD UP OUR FONT
+	TTF_Font* font4 = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
+															//create a sruface using this font to display some sort of message
+	SDL_Surface* textSurface4 = TTF_RenderText_Blended(font4, location3, textColor);
+	//convert surface to texture
+	SDL_Texture* textTexture4 = SDL_CreateTextureFromSurface(GlobalGameState::renderer, textSurface4);
+	//delete surface properly
+	SDL_FreeSurface(textSurface4);
+
+	//text destination
+	SDL_Rect textDestination3;
+	textDestination3.x = 275;
+	textDestination3.y = 35;
+	//get width and height from texture and set it for the destination
+	SDL_QueryTexture(textTexture4, NULL, NULL, &textDestination3.w, &textDestination3.h);
+
+	SDL_RenderCopy(GlobalGameState::renderer, textTexture4, NULL, &textDestination3);
+	//cleanup font
+	TTF_CloseFont(font4);
+	//clean up textures
+	SDL_DestroyTexture(textTexture4);
+
+
+
+	temp = s4.str();
+	const char* location4 = temp.c_str();
+	//LOAD UP OUR FONT
+	TTF_Font* font5 = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
+															//create a sruface using this font to display some sort of message
+	SDL_Surface* textSurface5 = TTF_RenderText_Blended(font5, location4, textColor);
+	//convert surface to texture
+	SDL_Texture* textTexture5 = SDL_CreateTextureFromSurface(GlobalGameState::renderer, textSurface5);
+	//delete surface properly
+	SDL_FreeSurface(textSurface5);
+
+	//text destination
+	SDL_Rect textDestination4;
+	textDestination4.x = 335;
+	textDestination4.y = 35;
+	//get width and height from texture and set it for the destination
+	SDL_QueryTexture(textTexture5, NULL, NULL, &textDestination4.w, &textDestination4.h);
+
+	SDL_RenderCopy(GlobalGameState::renderer, textTexture5, NULL, &textDestination4);
+	//cleanup font
+	TTF_CloseFont(font5);
+	//clean up textures
+	SDL_DestroyTexture(textTexture5);
 
 
 
