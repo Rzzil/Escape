@@ -60,6 +60,12 @@
     <ClCompile Include="SecondPlayScreenState.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="WinScreenState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -102,6 +108,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SecondPlayScreenState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WinScreenState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverState.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

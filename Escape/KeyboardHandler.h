@@ -1,5 +1,6 @@
 #pragma once
 #include "InputHandler.h"
+#include "SoundManager.h"
 
 using namespace std;
 
@@ -9,6 +10,7 @@ public:
 	float speed;
 	KeyboardHandler();
 	~KeyboardHandler();
+	const Uint8 *keystates;
 	
 	bool cooldowntriggerW;
 	bool cooldowntriggerS;

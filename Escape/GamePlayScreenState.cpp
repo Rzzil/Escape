@@ -185,20 +185,26 @@ GamePlayScreenState::~GamePlayScreenState()
 }
 
 void GamePlayScreenState::update() {
+	if (entities.back() == player)
+	{
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new SecondPlayScreenState());
+		return;
+	}
 	//update our delta time
 	Uint32 timeDiff = SDL_GetTicks() - lastUpdate;
 	dt = timeDiff / 1000.0;
 	lastUpdate = SDL_GetTicks();
 
-	//judge if the player hit the monsters
+	//judge if the player body hit the monsters
 	if (
 		(player->pos.x + 15 >= monster1->pos.x && player->pos.y + 15 >= monster1->pos.y) &&
 		(player->pos.x <= monster1->pos.x + 15 && player->pos.y <= monster1->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 
 	if (
@@ -206,9 +212,9 @@ void GamePlayScreenState::update() {
 		(player->pos.x <= monster2->pos.x + 15 && player->pos.y <= monster2->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 
 	if (
@@ -216,81 +222,81 @@ void GamePlayScreenState::update() {
 		(player->pos.x <= monster3->pos.x + 15 && player->pos.y <= monster3->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	if (
 		(player->pos.x + 15 >= monster4->pos.x && player->pos.y + 15 >= monster4->pos.y) &&
 		(player->pos.x <= monster4->pos.x + 15 && player->pos.y <= monster4->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	if (
 		(player->pos.x + 15 >= monster11->pos.x && player->pos.y + 15 >= monster11->pos.y) &&
 		(player->pos.x <= monster11->pos.x + 15 && player->pos.y <= monster11->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	if (
 		(player->pos.x + 15 >= monster5->pos.x && player->pos.y + 15 >= monster5->pos.y) &&
 		(player->pos.x <= monster5->pos.x + 15 && player->pos.y <= monster5->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	if (
 		(player->pos.x + 15 >= monster6->pos.x && player->pos.y + 15 >= monster6->pos.y) &&
 		(player->pos.x <= monster6->pos.x + 15 && player->pos.y <= monster6->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	if (
 		(player->pos.x + 15 >= monster7->pos.x && player->pos.y + 15 >= monster7->pos.y) &&
 		(player->pos.x <= monster7->pos.x + 15 && player->pos.y <= monster7->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	if (
 		(player->pos.x + 15 >= monster8->pos.x && player->pos.y + 15 >= monster8->pos.y) &&
 		(player->pos.x <= monster8->pos.x + 15 && player->pos.y <= monster8->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	if (
 		(player->pos.x + 15 >= monster9->pos.x && player->pos.y + 15 >= monster9->pos.y) &&
 		(player->pos.x <= monster9->pos.x + 15 && player->pos.y <= monster9->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	if (
 		(player->pos.x + 15 >= monster10->pos.x && player->pos.y + 15 >= monster10->pos.y) &&
 		(player->pos.x <= monster10->pos.x + 15 && player->pos.y <= monster10->pos.y + 15)
 		)
 	{
-		player->velocity.x = 0;
-		player->velocity.y = 0;
-		keyboardHandler.speed = 0;
+		GlobalGameState::gameStateMachine.popState();
+		GlobalGameState::gameStateMachine.pushState(new GameOverState());
+		return;
 	}
 	//The cooldown trigger of skills
 	if (keyboardHandler.cooldowntriggerA)
@@ -509,6 +515,140 @@ void GamePlayScreenState::update() {
 	{
 		e->update(dt);
 	}
+
+	//judge if the player strike landed the monsters
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster1->pos.x + 15 >= player->pos.x - 15 && monster1->pos.y + 15 >= monster1->pos.y - 15) &&
+		(monster1->pos.x <= player->pos.x + 30 && monster1->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster1);
+		monster1->pos.x = -100;
+		monster1->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster2->pos.x + 15 >= player->pos.x - 15 && monster2->pos.y + 15 >= monster2->pos.y - 15) &&
+		(monster2->pos.x <= player->pos.x + 30 && monster2->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster2);
+		monster2->pos.x = -100;
+		monster2->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster3->pos.x + 15 >= player->pos.x - 15 && monster3->pos.y + 15 >= monster3->pos.y - 15) &&
+		(monster3->pos.x <= player->pos.x + 30 && monster3->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster3);
+		monster3->pos.x = -100;
+		monster3->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster4->pos.x + 15 >= player->pos.x - 15 && monster4->pos.y + 15 >= monster4->pos.y - 15) &&
+		(monster4->pos.x <= player->pos.x + 30 && monster4->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster4);
+		monster4->pos.x = -100;
+		monster4->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster5->pos.x + 15 >= player->pos.x - 15 && monster5->pos.y + 15 >= monster5->pos.y - 15) &&
+		(monster5->pos.x <= player->pos.x + 30 && monster5->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster5);
+		monster5->pos.x = -100;
+		monster5->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster6->pos.x + 15 >= player->pos.x - 15 && monster6->pos.y + 15 >= monster6->pos.y - 15) &&
+		(monster6->pos.x <= player->pos.x + 30 && monster6->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster6);
+		monster6->pos.x = -100;
+		monster6->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster7->pos.x + 15 >= player->pos.x - 15 && monster7->pos.y + 15 >= monster7->pos.y - 15) &&
+		(monster7->pos.x <= player->pos.x + 30 && monster7->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster7);
+		monster7->pos.x = -100;
+		monster7->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster8->pos.x + 15 >= player->pos.x - 15 && monster8->pos.y + 15 >= monster8->pos.y - 15) &&
+		(monster8->pos.x <= player->pos.x + 30 && monster8->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster8);
+		monster8->pos.x = -100;
+		monster8->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster9->pos.x + 15 >= player->pos.x - 15 && monster9->pos.y + 15 >= monster9->pos.y - 15) &&
+		(monster9->pos.x <= player->pos.x + 30 && monster9->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster9);
+		monster9->pos.x = -100;
+		monster9->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster10->pos.x + 15 >= player->pos.x - 15 && monster10->pos.y + 15 >= monster10->pos.y - 15) &&
+		(monster10->pos.x <= player->pos.x + 30 && monster10->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster10);
+		monster10->pos.x = -100;
+		monster10->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
+	if ((player->skilla || player->skills || player->skillw || player->skilld) && ((monster11->pos.x + 15 >= player->pos.x - 15 && monster11->pos.y + 15 >= monster11->pos.y - 15) &&
+		(monster11->pos.x <= player->pos.x + 30 && monster11->pos.y <= player->pos.y + 30)))
+	{
+		entities.remove(monster11);
+		monster11->pos.x = -100;
+		monster11->pos.y = -100;
+		player->skilla = false;
+		player->skillw = false;
+		player->skills = false;
+		player->skilld = false;
+		return;
+	}
 }
 void GamePlayScreenState::render() {
 
@@ -525,30 +665,31 @@ void GamePlayScreenState::render() {
 		e->draw(0.6);
 	}
 
-	string temp = "x: " + to_string(player->pos.x) + " y: " + to_string(player->pos.y);
-	const char* location = temp.c_str();
-	//LOAD UP OUR FONT
-	TTF_Font* font = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
-	SDL_Color textColor = { 123, 0, 34, 0 };
-	//create a sruface using this font to display some sort of message
-	SDL_Surface* textSurface = TTF_RenderText_Blended(font, location, textColor);
-	//convert surface to texture
-	SDL_Texture* textTexture = SDL_CreateTextureFromSurface(GlobalGameState::renderer, textSurface);
-	//delete surface properly
-	SDL_FreeSurface(textSurface);
+	////location axis
+	//string temp = "x: " + to_string(player->pos.x) + " y: " + to_string(player->pos.y);
+	//const char* location = temp.c_str();
+	////LOAD UP OUR FONT
+	//TTF_Font* font = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
+	//SDL_Color textColor = { 123, 0, 34, 0 };
+	////create a sruface using this font to display some sort of message
+	//SDL_Surface* textSurface = TTF_RenderText_Blended(font, location, textColor);
+	////convert surface to texture
+	//SDL_Texture* textTexture = SDL_CreateTextureFromSurface(GlobalGameState::renderer, textSurface);
+	////delete surface properly
+	//SDL_FreeSurface(textSurface);
 
-	//text destination
-	SDL_Rect textDestination;
-	textDestination.x = 400;
-	textDestination.y = 10;
-	//get width and height from texture and set it for the destination
-	SDL_QueryTexture(textTexture, NULL, NULL, &textDestination.w, &textDestination.h);
+	////text destination
+	//SDL_Rect textDestination;
+	//textDestination.x = 400;
+	//textDestination.y = 10;
+	////get width and height from texture and set it for the destination
+	//SDL_QueryTexture(textTexture, NULL, NULL, &textDestination.w, &textDestination.h);
 
-	SDL_RenderCopy(GlobalGameState::renderer, textTexture, NULL, &textDestination);
-	//cleanup font
-	TTF_CloseFont(font);
-	//clean up textures
-	SDL_DestroyTexture(textTexture);
+	//SDL_RenderCopy(GlobalGameState::renderer, textTexture, NULL, &textDestination);
+	////cleanup font
+	//TTF_CloseFont(font);
+	////clean up textures
+	//SDL_DestroyTexture(textTexture);
 
 
 
@@ -562,8 +703,9 @@ void GamePlayScreenState::render() {
 	s3 << fixed << player->cooldownA;
 	s4 << fixed << player->cooldownD;
 
-	temp = s1.str();
+	string temp = s1.str();
 	const char* location1 = temp.c_str();
+	SDL_Color textColor = { 123, 0, 34, 0 };
 	//LOAD UP OUR FONT
 	TTF_Font* font2 = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
 															//create a sruface using this font to display some sort of message

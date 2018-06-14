@@ -10,6 +10,9 @@
 #include "KeyboardHandler.h"
 #include "MouseHandler.h"
 #include <sstream>
+#include "WinScreenState.h"
+#include "GameOverState.h"
+#include "MenuScreenState.h"
 
 
 using namespace std;

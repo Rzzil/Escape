@@ -20,6 +20,12 @@ public:
 	float cooldownS;
 	float cooldownA;
 	float cooldownD;
+
+	//the skill killing switch
+	bool skillw;
+	bool skills;
+	bool skilla;
+	bool skilld;
 	//overriding
 	virtual void update(float dt);
 	virtual void draw(float scale);

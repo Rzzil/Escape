@@ -119,6 +119,7 @@
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="GameOverState.cpp" />
     <ClCompile Include="GamePlayScreenState.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="GameStateMachine.cpp" />
@@ -132,10 +133,12 @@
     <ClCompile Include="SecondPlayScreenState.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="WinScreenState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="GameOverState.h" />
     <ClInclude Include="GamePlayScreenState.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="GameStateMachine.h" />
@@ -148,6 +151,7 @@
     <ClInclude Include="SecondPlayScreenState.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="WinScreenState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

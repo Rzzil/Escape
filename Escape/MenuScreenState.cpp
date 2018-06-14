@@ -26,13 +26,14 @@ MenuScreenState::~MenuScreenState()
 }
 
 void MenuScreenState::update() {
-	//update our delta time
+	//update our delta time 
 	Uint32 timeDiff = SDL_GetTicks() - lastUpdate;
 	dt = timeDiff / 1000.0;
 	lastUpdate = SDL_GetTicks();
+
 	if (player->pos.x <= 280)
 	{
-		player->pos.x += 3;
+		player->pos.x += 3+ 1*dt;
 	}
 	SDL_Event e;
 	while (SDL_PollEvent(&e))

@@ -7,6 +7,10 @@ Player::Player()
 	cooldownS = 5;
 	cooldownA = 5;
 	cooldownD = 5;
+	skillw = false;
+	skills = false;
+	skilla = false;
+	skilld = false;
 }
 
 Player::~Player()

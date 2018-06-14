@@ -103,8 +103,7 @@ int main(int argc, char **argv)
 	//params: music, how many times to play song(-1 means infinite loop)
 	Mix_PlayMusic(music, -1);
 
-	SoundManager::soundManager.loadSound("explode", "assets/effect.wav");
-	SoundManager::soundManager.loadSound("Action", "assets/Jump.wav");
+	SoundManager::soundManager.loadSound("Action", "assets/skillSound.wav");
 	bool loop = true;
 	while (loop) {
 
