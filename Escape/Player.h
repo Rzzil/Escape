@@ -2,6 +2,8 @@
 #include "Entity.h"
 #include "Animation.h"
 
+using namespace std;
+
 class Player :public Entity
 {
 private:

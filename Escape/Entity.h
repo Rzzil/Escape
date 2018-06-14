@@ -2,6 +2,8 @@
 #include <SDL.h>
 #include "Vector.h"
 
+using namespace std;
+
 class Entity
 {
 protected:

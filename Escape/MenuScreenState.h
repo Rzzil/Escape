@@ -10,6 +10,8 @@
 #include "GamePlayScreenState.h"
 #include "SoundManager.h"
 
+using namespace std;
+
 class MenuScreenState :
 	public GameState
 {

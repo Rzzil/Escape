@@ -3,6 +3,8 @@
 #include <SDL.h>
 #include"GameStateMachine.h"
 
+using namespace std;
+
 enum game_state {
 	MENU,
 	OPTIONS,

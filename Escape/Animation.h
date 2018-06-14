@@ -1,6 +1,8 @@
 #pragma once
 #include <SDL.h>
 
+using namespace std;
+
 class Animation
 {
 public:

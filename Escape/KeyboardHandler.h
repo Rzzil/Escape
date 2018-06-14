@@ -1,6 +1,8 @@
 #pragma once
 #include "InputHandler.h"
 
+using namespace std;
+
 class KeyboardHandler : public InputHandler
 {
 public:
