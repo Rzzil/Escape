@@ -36,6 +36,6 @@ public:
 	virtual void render();
 	virtual bool onEnter();
 	virtual bool onExit();
-	virtual string getStateID() const{ return "Stage2"; }
+	virtual std::string getStateID() const { return "stage2"; }
 };
 

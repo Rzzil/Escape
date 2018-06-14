@@ -218,6 +218,7 @@ void GamePlayScreenState::update() {
 			}
 		}
 		keyboardHandler.update(&e);
+		//mouseHandler.update(&e);
 	}
 
 	//hero->update(dt);

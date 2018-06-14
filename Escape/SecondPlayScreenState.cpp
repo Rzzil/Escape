@@ -16,6 +16,7 @@ SecondPlayScreenState::SecondPlayScreenState()
 
 	entities.push_back(player);
 	keyboardHandler.player = player;
+	keyboardHandler.state = getStateID();
 
 	lastUpdate = SDL_GetTicks();
 }
