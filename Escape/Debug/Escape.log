@@ -1,9 +1,4 @@
-﻿  SecondPlayScreenState.cpp
-c:\users\administrator\desktop\class\github\escape\escape\secondplayscreenstate.cpp(11): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\desktop\class\github\escape\escape\secondplayscreenstate.cpp(11): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\desktop\class\github\escape\escape\secondplayscreenstate.cpp(34): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-c:\users\administrator\desktop\class\github\escape\escape\secondplayscreenstate.cpp(78): warning C4305: “参数”: 从“double”到“float”截断
-  GamePlayScreenState.cpp
+﻿  GamePlayScreenState.cpp
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(10): warning C4305: “参数”: 从“double”到“float”截断
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(10): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(22): warning C4305: “参数”: 从“double”到“float”截断
@@ -48,23 +43,5 @@ c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cp
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(117): warning C4305: “=”: 从“double”到“float”截断
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(184): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(238): warning C4305: “参数”: 从“double”到“float”截断
-  正在生成代码...
-  正在编译...
-  main.cpp
-  Vector.cpp
-  Player.cpp
-c:\users\administrator\desktop\class\github\escape\escape\player.cpp(40): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-c:\users\administrator\desktop\class\github\escape\escape\player.cpp(42): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-  MouseHandler.cpp
-c:\users\administrator\desktop\class\github\escape\escape\mousehandler.cpp(35): warning C4244: “=”: 从“Sint32”转换到“float”，可能丢失数据
-c:\users\administrator\desktop\class\github\escape\escape\mousehandler.cpp(36): warning C4244: “=”: 从“Sint32”转换到“float”，可能丢失数据
-  MenuScreenState.cpp
-c:\users\administrator\desktop\class\github\escape\escape\menuscreenstate.cpp(8): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\administrator\desktop\class\github\escape\escape\menuscreenstate.cpp(8): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\administrator\desktop\class\github\escape\escape\menuscreenstate.cpp(31): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-  KeyboardHandler.cpp
-  InputHandler.cpp
-  Entity.cpp
-  正在生成代码...
   Escape.vcxproj -> C:\Users\Administrator\Desktop\class\github\Escape\Debug\Escape.exe
   Escape.vcxproj -> C:\Users\Administrator\Desktop\class\github\Escape\Debug\Escape.pdb (Partial PDB)

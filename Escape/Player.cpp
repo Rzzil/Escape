@@ -25,6 +25,22 @@ void Player::update(float dt) {
 	if (velocity.x < 0) {
 		faceRight = false;
 	}
+	if (pos.x < 20)
+	{
+		pos.x = 20;
+	}
+	if (pos.x > 592)
+	{
+		pos.x = 592;
+	}
+	if (pos.y < 83.5)
+	{
+		pos.y = 83.5;
+	}
+	if (pos.y > 425)
+	{
+		pos.y = 425;
+	}
 
 	//use basic entity movement to move around
 	updateMovement(dt);
