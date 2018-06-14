@@ -3,7 +3,10 @@
 
 Player::Player()
 {
-
+	cooldownW = 5;
+	cooldownS = 5;
+	cooldownA = 5;
+	cooldownD = 5;
 }
 
 Player::~Player()

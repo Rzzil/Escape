@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "KeyboardHandler.h"
 #include "MouseHandler.h"
+#include <sstream>
 
 
 using namespace std;
@@ -19,6 +20,11 @@ class GamePlayScreenState :
 public:
 	//we're gonna add textures and stuff here as attributes
 	SDL_Texture* textTexture;
+
+	int direction1;
+	int direction2;
+
+	float count = 1.5;
 
 	list<Player*> entities;
 

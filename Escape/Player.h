@@ -15,6 +15,11 @@ public:
 
 	void setAnimation(Animation* animation);
 
+	//the skill cooldown of the player
+	float cooldownW;
+	float cooldownS;
+	float cooldownA;
+	float cooldownD;
 	//overriding
 	virtual void update(float dt);
 	virtual void draw(float scale);

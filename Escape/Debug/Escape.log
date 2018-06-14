@@ -41,7 +41,7 @@ c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cp
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(113): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(116): warning C4305: “=”: 从“double”到“float”截断
 c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(117): warning C4305: “=”: 从“double”到“float”截断
-c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(184): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(238): warning C4305: “参数”: 从“double”到“float”截断
+c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(182): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\desktop\class\github\escape\escape\gameplayscreenstate.cpp(416): warning C4305: “参数”: 从“double”到“float”截断
   Escape.vcxproj -> C:\Users\Administrator\Desktop\class\github\Escape\Debug\Escape.exe
   Escape.vcxproj -> C:\Users\Administrator\Desktop\class\github\Escape\Debug\Escape.pdb (Partial PDB)

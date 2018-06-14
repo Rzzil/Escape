@@ -120,8 +120,6 @@ GamePlayScreenState::GamePlayScreenState()
 
 
 	lastUpdate = SDL_GetTicks();
-
-	
 }
 
 GamePlayScreenState::~GamePlayScreenState()
@@ -183,6 +181,186 @@ void GamePlayScreenState::update() {
 	Uint32 timeDiff = SDL_GetTicks() - lastUpdate;
 	dt = timeDiff / 1000.0;
 	lastUpdate = SDL_GetTicks();
+
+	//judge if the player hit the monsters
+	if (true)
+	{
+
+	}
+	//The cooldown trigger of skills
+	if (keyboardHandler.cooldowntriggerA)
+	{
+		player->cooldownA -= dt;
+		if (player->cooldownA <= 0)
+		{
+			keyboardHandler.cooldowntriggerA = false;
+			player->cooldownA = 5;
+		}	
+	}
+
+	if (keyboardHandler.cooldowntriggerW)
+	{
+		player->cooldownW -= dt;
+		if (player->cooldownW <= 0)
+		{
+			keyboardHandler.cooldowntriggerW = false;
+			player->cooldownW = 5;
+		}
+	}
+
+	if (keyboardHandler.cooldowntriggerS)
+	{
+		player->cooldownS -= dt;
+		if (player->cooldownS <= 0)
+		{
+			keyboardHandler.cooldowntriggerS = false;
+			player->cooldownS = 5;
+		}
+	}
+
+	if (keyboardHandler.cooldowntriggerD)
+	{
+		player->cooldownD -= dt;
+		if (player->cooldownD <= 0)
+		{
+			keyboardHandler.cooldowntriggerD = false;
+			player->cooldownD = 5;
+		}
+	}
+	
+	count += dt;
+
+	//random monster movement every 0.5 sec
+	if (count > 0.5)
+	{
+		count = 0;
+
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster1->velocity.x = 100;
+		else
+			monster1->velocity.x = -100;
+		if (direction2 < 50)
+			monster1->velocity.y = 100;
+		else
+			monster1->velocity.y = -100;
+
+
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster2->velocity.x = 100;
+		else
+			monster2->velocity.x = -100;
+		if (direction2 < 50)
+			monster2->velocity.y = 100;
+		else
+			monster2->velocity.y = -100;
+
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster3->velocity.x = 100;
+		else
+			monster3->velocity.x = -100;
+		if (direction2 < 50)
+			monster3->velocity.y = 100;
+		else
+			monster3->velocity.y = -100;
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster4->velocity.x = 100;
+		else
+			monster4->velocity.x = -100;
+		if (direction2 < 50)
+			monster4->velocity.y = 100;
+		else
+			monster4->velocity.y = -100;
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster5->velocity.x = 100;
+		else
+			monster5->velocity.x = -100;
+		if (direction2 < 50)
+			monster5->velocity.y = 100;
+		else
+			monster5->velocity.y = -100;
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster6->velocity.x = 100;
+		else
+			monster6->velocity.x = -100;
+		if (direction2 < 50)
+			monster6->velocity.y = 100;
+		else
+			monster6->velocity.y = -100;
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster7->velocity.x = 100;
+		else
+			monster7->velocity.x = -100;
+		if (direction2 < 50)
+			monster7->velocity.y = 100;
+		else
+			monster7->velocity.y = -100;
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster8->velocity.x = 100;
+		else
+			monster8->velocity.x = -100;
+		if (direction2 < 50)
+			monster8->velocity.y = 100;
+		else
+			monster8->velocity.y = -100;
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster9->velocity.x = 100;
+		else
+			monster9->velocity.x = -100;
+		if (direction2 < 50)
+			monster9->velocity.y = 100;
+		else
+			monster9->velocity.y = -100;
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster10->velocity.x = 100;
+		else
+			monster10->velocity.x = -100;
+		if (direction2 < 50)
+			monster10->velocity.y = 100;
+		else
+			monster10->velocity.y = -100;
+		direction1 = rand() % 100;
+		direction2 = rand() % 100;
+
+		if (direction1 < 50)
+			monster11->velocity.x = 100;
+		else
+			monster11->velocity.x = -100;
+		if (direction2 < 50)
+			monster11->velocity.y = 100;
+		else
+			monster11->velocity.y = -100;
+
+	}
 
 	//TODO DEAL WITH USER INPUT
 	//DEAL WITH USER INPUT
@@ -262,6 +440,74 @@ void GamePlayScreenState::render() {
 	TTF_CloseFont(font);
 	//clean up textures
 	SDL_DestroyTexture(textTexture);
+
+	stringstream s1, s2;
+	s1.precision(1);
+	s2.precision(1);
+	s1 << fixed << player->cooldownW;
+	s2 << fixed << player->cooldownS;
+
+	temp = "Skill W CD: " + s1.str() + " Skill S CD: " + s2.str();
+	const char* location1 = temp.c_str();
+	//LOAD UP OUR FONT
+	TTF_Font* font2 = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
+															//create a sruface using this font to display some sort of message
+	SDL_Surface* textSurface2 = TTF_RenderText_Blended(font2, location1, textColor);
+	//convert surface to texture
+	SDL_Texture* textTexture2 = SDL_CreateTextureFromSurface(GlobalGameState::renderer, textSurface2);
+	//delete surface properly
+	SDL_FreeSurface(textSurface2); 
+
+	//text destination
+	SDL_Rect textDestination1;
+	textDestination1.x = 30;
+	textDestination1.y = 10;
+	//get width and height from texture and set it for the destination
+	SDL_QueryTexture(textTexture2, NULL, NULL, &textDestination1.w, &textDestination1.h);
+
+	SDL_RenderCopy(GlobalGameState::renderer, textTexture2, NULL, &textDestination1);
+	//cleanup font
+	TTF_CloseFont(font2);
+	//clean up textures
+	SDL_DestroyTexture(textTexture2);
+
+
+	stringstream s3, s4;
+	s3.precision(1);
+	s4.precision(1);
+	s3 << fixed << player->cooldownA;
+	s4 << fixed << player->cooldownD;
+
+	temp = "Skill A CD: " + s3.str() + " Skill D CD: " + s4.str();
+	const char* location2 = temp.c_str();
+	//LOAD UP OUR FONT
+	TTF_Font* font3 = TTF_OpenFont("assets/yahei.ttf", 16); //params: font file, font size
+															//create a sruface using this font to display some sort of message
+	SDL_Surface* textSurface3 = TTF_RenderText_Blended(font3, location2, textColor);
+	//convert surface to texture
+	SDL_Texture* textTexture3 = SDL_CreateTextureFromSurface(GlobalGameState::renderer, textSurface3);
+	//delete surface properly
+	SDL_FreeSurface(textSurface3);
+
+	//text destination
+	SDL_Rect textDestination2;
+	textDestination2.x = 30;
+	textDestination2.y = 40;
+	//get width and height from texture and set it for the destination
+	SDL_QueryTexture(textTexture3, NULL, NULL, &textDestination2.w, &textDestination2.h);
+
+	SDL_RenderCopy(GlobalGameState::renderer, textTexture3, NULL, &textDestination2);
+	//cleanup font
+	TTF_CloseFont(font3);
+	//clean up textures
+	SDL_DestroyTexture(textTexture3);
+
+
+
+
+
+
+
 
 
 

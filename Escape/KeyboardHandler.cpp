@@ -4,6 +4,10 @@
 KeyboardHandler::KeyboardHandler()
 {
 	speed = 100;
+	cooldowntriggerW = false;
+	cooldowntriggerS = false;
+	cooldowntriggerA = false;
+	cooldowntriggerD = false;
 }
 
 
@@ -15,11 +19,23 @@ void KeyboardHandler::update(SDL_Event* event) {
 	//button presses for our hero
 	if (event->type == SDL_KEYDOWN) {
 		//reset hero position if press R
-		if (event->key.keysym.scancode == SDL_SCANCODE_R) {
-			player->pos.x = 200;
-			player->pos.y = 200;
+		if (event->key.keysym.scancode == SDL_SCANCODE_A && !cooldowntriggerA) {
+			cooldowntriggerA = true;
+			player->pos.x -= 20;
 		}
 		//TODO add attacks or other actions here for button presses
+		if (event->key.keysym.scancode == SDL_SCANCODE_D && !cooldowntriggerD) {
+			cooldowntriggerD = true;
+			player->pos.x += 20;
+		}
+		if (event->key.keysym.scancode == SDL_SCANCODE_W && !cooldowntriggerW) {
+			cooldowntriggerW = true;
+			player->pos.y -= 20;
+		}
+		if (event->key.keysym.scancode == SDL_SCANCODE_S && !cooldowntriggerS) {
+			cooldowntriggerS = true;
+			player->pos.y += 20;
+		}
 	}
 
 	//check if a button is held down
