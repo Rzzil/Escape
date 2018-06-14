@@ -14,6 +14,8 @@ GamePlayScreenState::GamePlayScreenState()
 	player->pos.y = 83.5;
 	entities.push_back(player);
 	keyboardHandler.player = player;
+	keyboardHandler.state = getStateID();
+
 	//monster1 set
 	monster1Texture = IMG_LoadTexture(GlobalGameState::renderer, "assets/Monster1.png");
 	monster1 = new Player();
@@ -216,7 +218,6 @@ void GamePlayScreenState::update() {
 			}
 		}
 		keyboardHandler.update(&e);
-		//mouseHandler.update(&e);
 	}
 
 	//hero->update(dt);

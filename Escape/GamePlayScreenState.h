@@ -101,6 +101,6 @@ public:
 	virtual void render();
 	virtual bool onEnter();
 	virtual bool onExit();
-	virtual std::string getStateID() const { return "gamePlayState"; }
+	virtual string getStateID() const{ return "Stage1"; }
 };
 
