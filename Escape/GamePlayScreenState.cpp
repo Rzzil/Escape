@@ -36,6 +36,13 @@ GamePlayScreenState::GamePlayScreenState()
 	dsrc = { 0, 0, 60, 78 };
 	ddest = { 330, 30, 30, 30 };
 
+
+	//particle set
+	particleTexture = IMG_LoadTexture(GlobalGameState::renderer, "assets/particle.png");
+	particle = new Player();
+	particleAnimation = new Animation(particleTexture, GlobalGameState::renderer, 5, 192, 192, 0.1);
+	particle->setAnimation(particleAnimation);
+	particle->setRenderer(GlobalGameState::renderer);
 	//monster1 set
 	monster1Texture = IMG_LoadTexture(GlobalGameState::renderer, "assets/Monster1.png");
 	monster1 = new Player();
@@ -314,6 +321,12 @@ void GamePlayScreenState::update() {
 		GlobalGameState::gameStateMachine.pushState(new GameOverState());
 		return;
 	}
+	//the particle switch of the skill
+	if (player->particleCD <= 0)
+	{
+		keyboardHandler.particleSwitch = false;
+	}
+
 	//The cooldown trigger of skills
 	if (keyboardHandler.cooldowntriggerA)
 	{
@@ -823,6 +836,16 @@ void GamePlayScreenState::render() {
 	//clean up textures
 	SDL_DestroyTexture(textTexture5);
 
+
+	//particle present
+	if (keyboardHandler.particleSwitch)
+	{
+		player->particleCD -= dt;
+		particle->pos.x = player->pos.x - 10;
+		particle->pos.y = player->pos.y - 10;
+		particle->update(dt);
+		particle->draw(0.2);
+	}
 
 
 

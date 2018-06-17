@@ -7,6 +7,7 @@ Player::Player()
 	cooldownS = 5;
 	cooldownA = 5;
 	cooldownD = 5;
+	particleCD = 1.5;
 	skillw = false;
 	skills = false;
 	skilla = false;

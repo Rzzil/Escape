@@ -59,6 +59,11 @@ public:
 	Player *player;
 	Animation *playerAnimation;
 
+	//particle declear
+	SDL_Texture *particleTexture;
+	Player *particle;
+	Animation *particleAnimation;
+
 	//Monster1 declear
 	SDL_Texture *monster1Texture;
 	Player *monster1;

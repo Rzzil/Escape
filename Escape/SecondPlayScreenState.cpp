@@ -39,6 +39,12 @@ SecondPlayScreenState::SecondPlayScreenState()
 	keyboardHandler.player = player;
 	keyboardHandler.state = getStateID();
 
+	//particle set
+	particleTexture = IMG_LoadTexture(GlobalGameState::renderer, "assets/particle.png");
+	particle = new Player();
+	particleAnimation = new Animation(particleTexture, GlobalGameState::renderer, 5, 192, 192, 0.1);
+	particle->setAnimation(particleAnimation);
+	particle->setRenderer(GlobalGameState::renderer);
 	//monster1 set
 	monster1Texture = IMG_LoadTexture(GlobalGameState::renderer, "assets/Monster1.png");
 	monster1 = new Player();
@@ -204,6 +210,11 @@ SecondPlayScreenState::~SecondPlayScreenState()
 
 void SecondPlayScreenState::update()
 {
+	//the particle switch of the skill
+	if (player->particleCD <= 0)
+	{
+		keyboardHandler.particleSwitch = false;
+	}
 	if (entities.back() == player)
 	{
 		GlobalGameState::gameStateMachine.popState();
@@ -795,6 +806,16 @@ void SecondPlayScreenState::render()
 	TTF_CloseFont(font5);
 	//clean up textures
 	SDL_DestroyTexture(textTexture5);
+
+	//particle present
+	if (keyboardHandler.particleSwitch)
+	{
+		player->particleCD -= dt;
+		particle->pos.x = player->pos.x - 10;
+		particle->pos.y = player->pos.y - 10;
+		particle->update(dt);
+		particle->draw(0.2);
+	}
 
 	SDL_RenderPresent(GlobalGameState::renderer);
 }

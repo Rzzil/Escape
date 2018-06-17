@@ -21,6 +21,9 @@ public:
 	float cooldownA;
 	float cooldownD;
 
+	//particle cooldown
+	float particleCD;
+
 	//the skill killing switch
 	bool skillw;
 	bool skills;

@@ -8,6 +8,7 @@ KeyboardHandler::KeyboardHandler()
 	cooldowntriggerS = false;
 	cooldowntriggerA = false;
 	cooldowntriggerD = false;
+	particleSwitch = false;
 }
 
 
@@ -30,6 +31,11 @@ void KeyboardHandler::update(SDL_Event* event) {
 			player->pos.x -= 50;
 			player->skilla = true;
 			SoundManager::soundManager.playSound("Action");
+			player->particleCD = 1.5;
+			if(particleSwitch != true)
+			{
+				particleSwitch = true;
+			}
 		}
 		//TODO add attacks or other actions here for button presses
 		if (event->key.keysym.scancode == SDL_SCANCODE_D && !cooldowntriggerD) {
@@ -37,18 +43,33 @@ void KeyboardHandler::update(SDL_Event* event) {
 			player->pos.x += 50;
 			player->skilld = true;
 			SoundManager::soundManager.playSound("Action");
+			player->particleCD = 1.5;
+			if (particleSwitch != true)
+			{
+				particleSwitch = true;
+			}
 		}
 		if (event->key.keysym.scancode == SDL_SCANCODE_W && !cooldowntriggerW) {
 			cooldowntriggerW = true;
 			player->pos.y -= 50;
 			player->skillw = true;
 			SoundManager::soundManager.playSound("Action");
+			player->particleCD = 1.5;
+			if (particleSwitch != true)
+			{
+				particleSwitch = true;
+			}
 		}
 		if (event->key.keysym.scancode == SDL_SCANCODE_S && !cooldowntriggerS) {
 			cooldowntriggerS = true;
 			player->pos.y += 50;
 			player->skills = true;
 			SoundManager::soundManager.playSound("Action");
+			player->particleCD = 1.5;
+			if (particleSwitch != true)
+			{
+				particleSwitch = true;
+			}
 		}
 	}
 

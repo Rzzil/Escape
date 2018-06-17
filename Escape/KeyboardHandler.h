@@ -16,6 +16,9 @@ public:
 	bool cooldowntriggerS;
 	bool cooldowntriggerA;
 	bool cooldowntriggerD;
+
+	//particle switch
+	bool particleSwitch;
 	string state;
 
 	void update(SDL_Event* event);
