@@ -12,6 +12,8 @@ MenuScreenState::MenuScreenState()
 	player->pos.x = 0;
 	player->pos.y = 240;
 
+	textColor = { 123, 0, 34, 0 };
+
 	entities.push_back(player);
 
 	lastUpdate = SDL_GetTicks();

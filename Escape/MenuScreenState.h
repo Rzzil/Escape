@@ -24,7 +24,7 @@ public:
 	//for text color
 	float textDelayTime = 0;
 	//for text color
-	SDL_Color textColor = { 123, 0, 34, 0 };
+	SDL_Color textColor;
 
 	list<Player*> entities;
 

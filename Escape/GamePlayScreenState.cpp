@@ -20,6 +20,22 @@ GamePlayScreenState::GamePlayScreenState()
 	keyboardHandler.player = player;
 	keyboardHandler.state = getStateID();
 
+	backgroundSrc = { 0, 0, 644, 404 };
+	backgroundDest = { 0, 0, 640, 480 };
+
+	wsrc = { 0, 0, 61, 80 };
+	wdest = { 300, 0, 30, 30 };
+
+
+	ssrc = { 0, 0, 61, 81 };
+	sdest = { 300, 30, 30, 30 };
+
+	asrc = { 0, 0, 61, 79 };
+	adest = { 270, 30, 30, 30 };
+
+	dsrc = { 0, 0, 60, 78 };
+	ddest = { 330, 30, 30, 30 };
+
 	//monster1 set
 	monster1Texture = IMG_LoadTexture(GlobalGameState::renderer, "assets/Monster1.png");
 	monster1 = new Player();

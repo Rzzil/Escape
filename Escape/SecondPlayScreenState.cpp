@@ -11,6 +11,23 @@ SecondPlayScreenState::SecondPlayScreenState()
 	a = IMG_LoadTexture(GlobalGameState::renderer, "assets/A.png");
 	d = IMG_LoadTexture(GlobalGameState::renderer, "assets/D.png");
 
+	dt = 0;//time since last update
+
+	backgroundSrc = { 0, 0, 644, 404 };
+	backgroundDest = { 0, 0, 640, 480 };
+
+	wsrc = { 0, 0, 61, 80 };
+	wdest = { 300, 0, 30, 30 };
+
+	ssrc = { 0, 0, 61, 81 };
+	sdest = { 300, 30, 30, 30 };
+
+	asrc = { 0, 0, 61, 79 };
+	adest = { 270, 30, 30, 30 };
+
+	dsrc = { 0, 0, 60, 78 };
+	ddest = { 330, 30, 30, 30 };
+
 	player = new Player();
 	playerAnimation = new Animation(playerTexture, GlobalGameState::renderer, 3, 47.67, 49, 0.1);
 	player->setAnimation(playerAnimation);

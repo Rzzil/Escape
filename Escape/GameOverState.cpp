@@ -5,6 +5,8 @@
 GameOverState::GameOverState()
 {
 	background = IMG_LoadTexture(GlobalGameState::renderer, "assets/Stage1.png");
+	backgroundSrc = { 0, 0, 644, 404 };
+	backgroundDest = { 0, 0, 640, 480 };
 }
 
 

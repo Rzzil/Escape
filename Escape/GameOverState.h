@@ -17,8 +17,8 @@ public:
 	~GameOverState();
 
 	SDL_Texture *background;
-	SDL_Rect backgroundSrc = { 0,0,644,404 };
-	SDL_Rect backgroundDest = { 0,0,640,480 };
+	SDL_Rect backgroundSrc;
+	SDL_Rect backgroundDest;
 
 	virtual void update();
 	virtual void render();

@@ -35,24 +35,24 @@ public:
 	MouseHandler mouseHandler;
 
 	SDL_Texture *background;
-	SDL_Rect backgroundSrc = { 0,0,644,404 };
-	SDL_Rect backgroundDest = { 0,0,640,480 };
+	SDL_Rect backgroundSrc;
+	SDL_Rect backgroundDest;
 
 	SDL_Texture *w;
-	SDL_Rect wsrc = { 0,0,61,80 };
-	SDL_Rect wdest = { 300,0,30,30 };
+	SDL_Rect wsrc;
+	SDL_Rect wdest;
 
 	SDL_Texture *s;
-	SDL_Rect ssrc = { 0,0,61,81 };
-	SDL_Rect sdest = { 300,30,30,30 };
+	SDL_Rect ssrc;
+	SDL_Rect sdest;
 
 	SDL_Texture *a;
-	SDL_Rect asrc = { 0,0,61,79 };
-	SDL_Rect adest = { 270,30,30,30 };
+	SDL_Rect asrc;
+	SDL_Rect adest;
 
 	SDL_Texture *d;
-	SDL_Rect dsrc = { 0,0,60,78 };
-	SDL_Rect ddest = { 330,30,30,30 };
+	SDL_Rect dsrc;
+	SDL_Rect ddest;
 
 	//player declear
 	SDL_Texture *playerTexture;
